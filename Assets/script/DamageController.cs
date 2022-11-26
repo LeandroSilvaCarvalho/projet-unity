@@ -17,8 +17,11 @@ public class DamageController : MonoBehaviour
     private void DamageCard()
     {
 
-        if (Input.GetKey(KeyCode.Space))
+        Debug.Log("damage card");
+
+        if (Input.GetKeyUp(KeyCode.Space))
         {
+            Debug.Log("input key");
             enemyController.TakeDamage(damage);
         }
          

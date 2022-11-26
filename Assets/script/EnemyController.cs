@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] float health, maxHealth = 3f;
-
-    private void Start()
-    {
-        health = maxHealth;
-    }
+    [SerializeField] private float health;
 
     public void TakeDamage(float damageAmount)
     {
+
+        Debug.Log("take damage");
 
         health -= damageAmount;
         if (health <= 0)
