@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class DamageController : MonoBehaviour
 {
-    private EnemyController enemyController = new EnemyController();
+    [SerializeField] private EnemyController enemyController;
     [SerializeField] float damage;
-
 
     private void Update()
     {
@@ -19,7 +18,7 @@ public class DamageController : MonoBehaviour
 
         Debug.Log("damage card");
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("input key");
             enemyController.TakeDamage(damage);
